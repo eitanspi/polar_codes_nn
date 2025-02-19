@@ -16,22 +16,5 @@ Polar codes are a class of error-correcting codes that achieve the Shannon capac
 - **`nn_vs_classic_analysis.py`** - Compares the performance of neural network-based decoding against classical decoding methods.
 - **`frozen_bits.json`** - Precomputed sets of frozen bits for different block lengths.
 
-## **Usage**
-### **1. Training the Neural Network**
-To train the model:
-```bash
-python train_nn_embedding.py
-```
 
-### **2. Testing the Model**
-To evaluate the trained model:
-```bash
-python test_nn_embedding.py
-```
-
-### **3. Comparing SC and NN-Based Decoding**
-Run the comparative analysis:
-```bash
-python nn_vs_classic_analysis.py
-```
 
