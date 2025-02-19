@@ -1,0 +1,37 @@
+
+# **Polar Code Analysis with Neural Networks**
+
+This repository contains scripts and data for analyzing polar codes and comparing classical and neural network-based decoding approaches.
+
+## **Overview**
+Polar codes are a class of error-correcting codes that achieve the Shannon capacity under successive cancellation (SC) decoding. This project explores enhancements using neural networks for improved performance in unknown channels with and without memory.
+
+## **Project Structure**
+- **`polar_code_analysis.py`** - Main script for analyzing polar codes, implementing SC decoding and error correction performance evaluation.
+- **`nn_embedding.py`** - Defines the neural network model for decoding polar codes.
+- **`train_nn_embedding.py`** - Script for training the neural network model.
+- **`test_nn_embedding.py`** - Evaluates the trained neural network's performance.
+- **`sc_nn_embedding.py`** - Implementation of SC decoding integrated with neural embeddings.
+- **`best_indices_selection.py`** - Identifies the best frozen bit positions for polar codes.
+- **`nn_vs_classic_analysis.py`** - Compares the performance of neural network-based decoding against classical decoding methods.
+- **`frozen_bits.json`** - Precomputed sets of frozen bits for different block lengths.
+
+## **Usage**
+### **1. Training the Neural Network**
+To train the model:
+```bash
+python train_nn_embedding.py
+```
+
+### **2. Testing the Model**
+To evaluate the trained model:
+```bash
+python test_nn_embedding.py
+```
+
+### **3. Comparing SC and NN-Based Decoding**
+Run the comparative analysis:
+```bash
+python nn_vs_classic_analysis.py
+```
+
