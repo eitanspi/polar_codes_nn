@@ -1,24 +1,3 @@
-
-# **Polar Code Analysis with Neural Networks**
-
-This repository contains scripts and data for analyzing polar codes and comparing classical and neural network-based decoding approaches.
-
-## **Overview**
-Polar codes are a class of error-correcting codes that achieve the Shannon capacity under successive cancellation (SC) decoding. This project explores enhancements using neural networks for improved performance in unknown channels with and without memory.
-
-## **Project Structure**
-- **`classic_polar_coding.py`** - Implementation of the classic polar coding algorithm. Including functions for: random binary message creator, frozen bits addition, polar encoding, BPSK, AWGN,channel embedding, bit node and check node operations, SC polar decoding (given forzen indices), SC with genie (for analysis purposes).
-- **`best_indices_selection.py`** - Identifies the best frozen bit positions for polar codes, by using Monte Carlo method, for AWGN, BEC, BSC channels. the output is json file with list of indices from least relaibel to best, per block length.
-- **`frozen_bits.json`** - Precomputed sets of frozen bits for different block lengths. i.e the output of best_indices_selection.py
-- **`polar_code_analysis.py`** - inputs: R(ration between info bits and frozen bits), channel type (AWGN/BEC/BSC), channel param (i.e noise), json file with indices rankings. Outputs - BER per block length, both print and plot.
-- **`train_nn_embedding.py`** – Script for training the neural network (MINE) to estimate mutual information over an AWGN channel with BPSK-modulated inputs, and saving the trained model.
-- **`test_nn_embedding.py`** - Evaluates the trained neural network's performance.
-- **`nn_embedding.py`** – Defines the neural network model for computing Log-Likelihood Ratios (LLRs) using a trained MINE model for polar decoding.
-- **`sc_nn_embedding.py`** - Implementation of SC decoding integrated with neural embeddings.
-- **`nn_vs_classic_analysis.py`** - Compares the performance of neural network-based decoding against classical decoding methods.
-
-
-
 # **Polar Code Analysis with Neural Networks**
 
 This repository provides scripts and data for analyzing polar codes, comparing classical and neural network-based decoding methods to enhance performance, especially in unknown or memory channels.
